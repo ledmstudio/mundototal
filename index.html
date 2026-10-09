@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mundo Total | Tu Destino Online en Venezuela</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="normal-app-body">
+
+  <!-- NORMAL WEB APP CONTAINER (100% Mobile Responsive) -->
+  <div class="app-container" id="appContainer">
+
+    <!-- APP CONTENT MAIN -->
+    <main class="app-main" id="appMain">
+
+        <!-- 1. HEADER (Top Cyan Bar) -->
+        <header class="app-header">
+          <div class="header-main-row">
+            <!-- Hamburger menu button -->
+            <button class="icon-btn hamburger-btn" id="openDrawerBtn" aria-label="Abrir Menú de Departamentos">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+
+            <!-- Brand Logo -->
+            <div class="header-logo" id="headerHomeLogo">
+              <img src="./Logo Mundo total 5x5-02.png" alt="Mundo Total Logo" class="brand-logo-img">
+            </div>
+
+            <!-- Cart Button -->
+            <button class="icon-btn cart-btn" id="openCartBtn" aria-label="Ver Carrito de Compras">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+              </svg>
+              <span class="cart-badge" id="cartCountBadge">0</span>
+            </button>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="search-container">
+            <form id="searchForm" class="search-form">
+              <input type="text" id="searchInput" class="search-input" placeholder="Buscar productos, marcas, departamentos..." autocomplete="off">
+              <button type="submit" class="search-action-btn" aria-label="Buscar">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                  <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Brand Pills Scroller -->
+          <div class="brands-pills-row" id="brandsPillsRow">
+            <button class="brand-pill active" data-brand="all">Todas</button>
+            <button class="brand-pill" data-brand="LG">LG</button>
+            <button class="brand-pill" data-brand="Admiral">Admiral</button>
+            <button class="brand-pill" data-brand="PREMIER">PREMIER</button>
+            <button class="brand-pill" data-brand="Samsung">Samsung</button>
+            <button class="brand-pill" data-brand="Oster">Oster</button>
+            <button class="brand-pill" data-brand="Mabe">Mabe</button>
+            <button class="brand-pill" data-brand="Xiaomi">Xiaomi</button>
+          </div>
+        </header>
+
+        <!-- 2. ANNOUNCEMENT BANNER (Fixed, exactly as in mockup, no movement) -->
+        <div class="promo-announcement-bar" id="promoAnnouncementBar">
+          <span class="promo-fixed-text">DESCUENTO DEL 40% EN MAQUILLAJE DESDE 01 NOVIEMBRE HASTA 31 DE DICIEMBRE</span>
+        </div>
+
+        <!-- 3. HERO BANNER SLIDER (8 Uniform dimensions banners with drag & swipe) -->
+        <section class="hero-slider-section">
+          <div class="hero-slider-viewport" id="heroSlider">
+            <!-- Slide 1: Viajes y Accesorios (matching original mockup composition) -->
+            <div class="hero-slide active">
+              <div class="hero-slide-content slide-accessories">
+                <div class="hero-elements-composition">
+                  <div class="hero-item-tag">Colección 2026</div>
+                  <div class="hero-floating-images">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&auto=format&fit=crop&q=80" alt="Mochila Aventura" class="hero-img-backpack">
+                    <img src="https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=400&auto=format&fit=crop&q=80" alt="Maleta de Viaje" class="hero-img-suitcase">
+                    <img src="https://images.unsplash.com/photo-1559454403-b8fb88521f11?w=400&auto=format&fit=crop&q=80" alt="Peluche Capibara" class="hero-img-plush">
+                  </div>
+                  <div class="hero-badge-overlay">Equípate para todo</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Official Mundo Total (Calzado y Moda) -->
+            <div class="hero-slide">
+              <div class="hero-banner-image-wrapper">
+                <img src="https://totalmundo.vtexassets.com/assets/vtex.file-manager-graphql/images/afa48b4d-d770-43c2-a261-021c6aa0d474___394648f9a069fe77212b21962a0bd052.jpg" alt="Mundo Total Promociones Calzado" class="hero-banner-full-img">
+              </div>
+            </div>
+
+            <!-- Slide 3: Official Mundo Total (Hogar y Electrodomésticos) -->
+            <div class="hero-slide">
+              <div class="hero-banner-image-wrapper">
+                <img src="https://totalmundo.vtexassets.com/assets/vtex.file-manager-graphql/images/5c72c9d4-9b86-49c3-bd16-a4aa32feb9a2___920bee12969b275f555682379cfa194e.jpg" alt="Mundo Total Hogar y Electrodomésticos" class="hero-banner-full-img">
+              </div>
+            </div>
+
+            <!-- Slide 4: Official Mundo Total (Gran Ofertas) -->
+            <div class="hero-slide">
+              <div class="hero-banner-image-wrapper">
+                <img src="https://totalmundo.vtexassets.com/assets/vtex.file-manager-graphql/images/826a5994-379e-418c-bc30-f41940c7c877___700688cbbce7a33522f1c446fc22948c.jpg" alt="Mundo Total Ofertas Especiales" class="hero-banner-full-img">
+              </div>
+            </div>
+
+            <!-- Slide 5: Official Mundo Total (Belleza y Maquillaje 40% OFF) -->
+            <div class="hero-slide">
+              <div class="hero-banner-image-wrapper">
+                <img src="https://totalmundo.vtexassets.com/assets/vtex.file-manager-graphql/images/e08b3c47-0252-429e-a260-438bff3dc850___882b2f1c4aabf80fa207e500db7499ca.jpg" alt="Mundo Total Belleza" class="hero-banner-full-img">
+              </div>
+            </div>
+
+            <!-- Slide 6: Official Mundo Total (Tecnología y Audio) -->
+            <div class="hero-slide">
+              <div class="hero-banner-image-wrapper">
+                <img src="https://totalmundo.vtexassets.com/assets/vtex.file-manager-graphql/images/a038bf3d-2dc6-4852-be51-b0db4df821fa___1926b1dcbdb2a971d60fb2620c326084.jpg" alt="Mundo Total Tecnología y Audio" class="hero-banner-full-img">
+              </div>
+            </div>
+
+            <!-- Slide 7: Official Mundo Total (Moda y Estilo Urbano) -->
+            <div class="hero-slide">
+              <div class="hero-banner-image-wrapper">
+                <img src="https://totalmundo.vtexassets.com/assets/vtex.file-manager-graphql/images/418f45a0-97c3-42a0-b5bf-74b126317b35___a95ea50f38f152d0b571113b2c124036.jpg" alt="Mundo Total Moda y Estilo" class="hero-banner-full-img">
+              </div>
+            </div>
+
+            <!-- Slide 8: Official Mundo Total (Juguetería y Regalos) -->
+            <div class="hero-slide">
+              <div class="hero-banner-image-wrapper">
+                <img src="https://totalmundo.vtexassets.com/assets/vtex.file-manager-graphql/images/b2ffda33-3d02-45e0-9efd-a9e9e1c312cb___1b838965008be581eeb095ae0c1c8ba1.jpg" alt="Mundo Total Juguetería" class="hero-banner-full-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Dots Pagination (8 slides) -->
+          <div class="slider-dots" id="heroDots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+            <span class="dot" data-slide="5"></span>
+            <span class="dot" data-slide="6"></span>
+            <span class="dot" data-slide="7"></span>
+          </div>
+        </section>
+
+        <!-- 4. SUBTITLE TITLE -->
+        <section class="section-tagline">
+          <h2 class="tagline-text">
+            Mundo Total: Tu Destino Online para Hogar, Tecnología, Moda y Belleza en Venezuela
+          </h2>
+        </section>
+
+        <!-- 5. INTERACTIVE BRAND CAROUSEL & LINKED SOLID CYAN ENCLOSURE -->
+        <section class="brand-ecosystem-section" id="brandSection">
+          
+          <!-- Top Row of Brand Selector Cards (12 Brands Horizontally Scrollable) -->
+          <div class="brand-cards-row" id="brandCardsRow">
+            <!-- 1. LG Card -->
+            <div class="brand-select-card active" data-brand-tab="LG" id="brandTabLG">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge lg-logo-badge">
+                  <div class="lg-circle-icon"></div>
+                  <span class="lg-text-bold">LG</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://totalmundo.vteximg.com.br/arquivos/ids/259712/LG-MICROONDAS-30L-NEGRO-LGG19UG12B40UN.png?v=639157614610500000" alt="LG Microondas" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 2. Admiral Card -->
+            <div class="brand-select-card" data-brand-tab="Admiral" id="brandTabAdmiral">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge admiral-logo-badge">
+                  <span class="admiral-text">Admiral</span>
+                  <span class="admiral-flag">🚩</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://totalmundo.vteximg.com.br/arquivos/ids/274703/ADMIRAL-FREIDORA-DE-AIRE-5L-ADM19D408-ADM19D408B40UN.png?v=639224146655170000" alt="Admiral Electrodoméstico" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 3. PREMIER Card -->
+            <div class="brand-select-card" data-brand-tab="PREMIER" id="brandTabPremier">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge premier-logo-badge">
+                  <span class="premier-dots">●●●</span>
+                  <span class="premier-text">PREMIER</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://totalmundo.vteximg.com.br/arquivos/ids/274641/PREMIER-BATIDORA-PMI19WV23--ED-9618--PMI19WV23B60UN.png?v=639220482524500000" alt="Premier Batidora" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 4. Oster Card -->
+            <div class="brand-select-card" data-brand-tab="Oster" id="brandTabOster">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge oster-logo-badge">
+                  <span class="oster-text">Oster</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://totalmundo.vteximg.com.br/arquivos/ids/289980/OSTER-MINIBAR-84LT-OST197C30-OST197C30B40UN.png?v=639265475364430000" alt="Oster Minibar" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 5. Samsung Card -->
+            <div class="brand-select-card" data-brand-tab="Samsung" id="brandTabSamsung">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge samsung-logo-badge">
+                  <span class="samsung-text">SAMSUNG</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=200&auto=format&fit=crop&q=80" alt="Samsung Smart TV" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 6. Mabe Card -->
+            <div class="brand-select-card" data-brand-tab="Mabe" id="brandTabMabe">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge mabe-logo-badge">
+                  <span class="mabe-text">mabe</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=200&auto=format&fit=crop&q=80" alt="Mabe Lavadora" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 7. Xiaomi Card -->
+            <div class="brand-select-card" data-brand-tab="Xiaomi" id="brandTabXiaomi">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge xiaomi-logo-badge">
+                  <span class="xiaomi-icon">mi</span>
+                  <span class="xiaomi-text">Xiaomi</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=200&auto=format&fit=crop&q=80" alt="Xiaomi Smart" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 8. Daewoo Card -->
+            <div class="brand-select-card" data-brand-tab="Daewoo" id="brandTabDaewoo">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge daewoo-logo-badge">
+                  <span class="daewoo-text">DAEWOO</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=200&auto=format&fit=crop&q=80" alt="Daewoo TV" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 9. Philips Card -->
+            <div class="brand-select-card" data-brand-tab="Philips" id="brandTabPhilips">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge philips-logo-badge">
+                  <span class="philips-text">PHILIPS</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?w=200&auto=format&fit=crop&q=80" alt="Philips Shaver" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 10. Black+Decker Card -->
+            <div class="brand-select-card" data-brand-tab="BlackDecker" id="brandTabBlackDecker">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge bd-logo-badge">
+                  <span class="bd-text">B+D</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=200&auto=format&fit=crop&q=80" alt="B+D Cafetera" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 11. Aiwa Card -->
+            <div class="brand-select-card" data-brand-tab="Aiwa" id="brandTabAiwa">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge aiwa-logo-badge">
+                  <span class="aiwa-text">AIWA</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=200&auto=format&fit=crop&q=80" alt="Aiwa Audio" class="brand-card-thumb">
+              </div>
+            </div>
+
+            <!-- 12. Sony Card -->
+            <div class="brand-select-card" data-brand-tab="Sony" id="brandTabSony">
+              <div class="brand-card-left">
+                <div class="brand-logo-badge sony-logo-badge">
+                  <span class="sony-text">SONY</span>
+                </div>
+              </div>
+              <div class="brand-card-right">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&auto=format&fit=crop&q=80" alt="Sony Headphones" class="brand-card-thumb">
+              </div>
+            </div>
+          </div>
+
+          <!-- THE SOLID CYAN SHELF ENCLOSURE (Seamlessly connected around active brand tab) -->
+          <div class="brand-shelf-enclosure active-tab-lg" id="brandShelfEnclosure">
+            <!-- Header bar inside cyan shelf if needed, or pure 3 white cards -->
+            <div class="shelf-brand-active-header">
+              <span class="shelf-brand-pill-title" id="shelfActiveBrandTitle">Productos Destacados LG</span>
+              <span class="shelf-guarantee-badge">Garantía Directa</span>
+            </div>
+
+            <!-- Grid of 3 Product Cards inside solid cyan container -->
+            <div class="brand-products-grid" id="brandProductsContainer">
+              <!-- Dynamically populated via JS with official tumundototal.com assets -->
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. PROMO BANNER 2: AHORRO Y SOLUCIONES (3 Real Swipeable Banners) -->
+        <section class="banner-solutions-section">
+          <div class="solutions-slider-viewport" id="solutionsSlider">
+            <!-- Slide 1: Lavadora y Hogar -->
+            <div class="solutions-banner-card" onclick="app.filterByDept('Electrodomésticos')">
+              <div class="solutions-content">
+                <div class="as-badge">
+                  <span class="as-box">AS</span>
+                  <span class="as-title">AHORRO Y SOLUCIONES</span>
+                </div>
+                <p class="as-subtitle">Tu hogar renovado con facilidades y cuotas</p>
+              </div>
+              <div class="solutions-image-side">
+                <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&auto=format&fit=crop&q=80" alt="Lavadora y Hogar" class="solutions-hero-img">
+              </div>
+            </div>
+
+            <!-- Slide 2: Refrigeración y Cocina -->
+            <div class="solutions-banner-card" onclick="app.filterByDept('Electrodomésticos')">
+              <div class="solutions-content">
+                <div class="as-badge">
+                  <span class="as-box">AS</span>
+                  <span class="as-title">PLAN ESTRENA HOY</span>
+                </div>
+                <p class="as-subtitle">Neveras, cocinas y microondas con entrega garantizada</p>
+              </div>
+              <div class="solutions-image-side">
+                <img src="https://totalmundo.vtexassets.com/assets/vtex.file-manager-graphql/images/5c72c9d4-9b86-49c3-bd16-a4aa32feb9a2___920bee12969b275f555682379cfa194e.jpg" alt="Refrigeración" class="solutions-hero-img">
+              </div>
+            </div>
+
+            <!-- Slide 3: Smart TVs y Audio -->
+            <div class="solutions-banner-card" onclick="app.filterByDept('Tecnología')">
+              <div class="solutions-content">
+                <div class="as-badge">
+                  <span class="as-box">AS</span>
+                  <span class="as-title">TECNOLOGÍA TOTAL</span>
+                </div>
+                <p class="as-subtitle">Pantallas 4K y sistemas de sonido en oferta</p>
+              </div>
+              <div class="solutions-image-side">
+                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600&auto=format&fit=crop&q=80" alt="Smart TVs" class="solutions-hero-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Solutions Dots -->
+          <div class="slider-dots" id="solutionsDots">
+            <span class="dot active" data-solution-slide="0"></span>
+            <span class="dot" data-solution-slide="1"></span>
+            <span class="dot" data-solution-slide="2"></span>
+          </div>
+        </section>
+
+        <!-- 7. SECOND PRODUCTS SHELF (Trending & More Products) -->
+        <section class="catalog-shelf-section">
+          <div class="shelf-title-bar">
+            <h3>Más Populares en Mundo Total</h3>
+            <span class="view-all-link" onclick="app.showAllProducts()">Ver Todo</span>
+          </div>
+          <div class="brand-products-grid" id="secondaryProductsContainer">
+            <!-- Populated via JS -->
+          </div>
+        </section>
+
+        <!-- Extra spacing for fixed bottom navigation -->
+        <div class="bottom-spacer"></div>
+
+      </main>
+
+      <!-- 8. BOTTOM NAVIGATION BAR (Exact Match to Design Mockup) -->
+      <nav class="bottom-nav-bar" id="bottomNavBar">
+        <!-- 1. Asesoría -->
+        <button class="nav-item" id="navChat" aria-label="Asesoría">
+          <div class="nav-icon-wrap">
+            <svg viewBox="0 0 36 36" width="28" height="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 5C9.72 5 3 11.27 3 19c0 3.1 1.08 5.96 2.93 8.27L4.5 32l5.42-1.74C12.18 31.33 15 32 18 32c8.28 0 15-6.27 15-13S26.28 5 18 5z" stroke-width="2.6"/>
+              <circle cx="12" cy="18.5" r="1.6" fill="currentColor" stroke="none"/>
+              <circle cx="18" cy="18.5" r="1.6" fill="currentColor" stroke="none"/>
+              <circle cx="24" cy="18.5" r="1.6" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <span class="nav-label">Asesoría</span>
+        </button>
+
+        <!-- 2. Destacados -->
+        <button class="nav-item" id="navDestacados" aria-label="Destacados">
+          <div class="nav-icon-wrap">
+            <svg viewBox="0 0 36 36" width="28" height="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- 5-pointed star -->
+              <polygon points="18,7.5 21.6,14.5 29.5,15.6 23.8,21.2 25.2,29 18,25.2 10.8,29 12.2,21.2 6.5,15.6 14.4,14.5" stroke-width="2.5"/>
+              <!-- Radiating sparkle rays -->
+              <line x1="18" y1="2" x2="18" y2="4.5" stroke-width="2.2"/>
+              <line x1="7" y1="7.5" x2="9" y2="9.5" stroke-width="2.2"/>
+              <line x1="29" y1="7.5" x2="27" y2="9.5" stroke-width="2.2"/>
+              <line x1="3.5" y1="20" x2="5.5" y2="20" stroke-width="2.2"/>
+              <line x1="32.5" y1="20" x2="30.5" y2="20" stroke-width="2.2"/>
+            </svg>
+          </div>
+          <span class="nav-label">Destacados</span>
+        </button>
+
+        <!-- 3. Home (Center Elevated Cyan Circle with Rounded White House Outline) -->
+        <button class="nav-item nav-item-home active" id="navHome" aria-label="Inicio">
+          <div class="home-circle-badge">
+            <svg viewBox="0 0 48 48" width="38" height="38" fill="none" stroke="#ffffff" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 7.5 L8 20.5 H13 V 37.5 H 35 V 20.5 H 40 Z"/>
+            </svg>
+          </div>
+        </button>
+
+        <!-- 4. Favorito -->
+        <button class="nav-item" id="navFavoritos" aria-label="Favorito">
+          <div class="nav-icon-wrap">
+            <svg viewBox="0 0 32 32" width="27" height="27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 26.5l-1.8-1.63C7.8 19.12 3.5 15.3 3.5 10.5 3.5 6.63 6.55 3.6 10.4 3.6c2.18 0 4.27 1.02 5.6 2.62 1.33-1.6 3.42-2.62 5.6-2.62 3.85 0 6.9 3.03 6.9 6.9 0 4.8-4.3 8.62-10.7 14.37L16 26.5z"/>
+            </svg>
+            <span class="fav-count-pill" id="favCountPill">0</span>
+          </div>
+          <span class="nav-label">Favorito</span>
+        </button>
+
+        <!-- 5. Ofertas -->
+        <button class="nav-item" id="navOfertas" aria-label="Ofertas">
+          <div class="nav-icon-wrap">
+            <svg viewBox="0 0 32 32" width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Flame outline -->
+              <path d="M18 3C18 6.5 20.5 9 23 12C25.5 15 25.5 18 25.5 20C25.5 25.2 21.2 29 16 29C10.8 29 6.5 25.2 6.5 20C6.5 16 8.5 12.5 12 10C12 12.5 14 14 15.5 14C17 14 17.8 12.5 17.8 10.5C17.8 7.5 16.5 5 18 3Z" stroke-width="2.5"/>
+              <!-- Percent sign inside flame -->
+              <line x1="18.5" y1="17.5" x2="13.5" y2="23.5" stroke-width="2"/>
+              <circle cx="13.5" cy="18" r="1.3" stroke-width="1.6"/>
+              <circle cx="18.5" cy="23" r="1.3" stroke-width="1.6"/>
+            </svg>
+          </div>
+          <span class="nav-label">Ofertas</span>
+        </button>
+      </nav>
+
+      <!-- 9. SIDE MENU DRAWER (DEPARTAMENTOS - EXACT MATCH TO IMAGE 2) -->
+      <div class="drawer-overlay" id="drawerOverlay"></div>
+      <aside class="departments-drawer" id="departmentsDrawer">
+        <div class="drawer-header">
+          <div class="drawer-top-row">
+            <button class="drawer-close-btn" id="closeDrawerBtn" aria-label="Cerrar Menú">
+              <span class="bar bar-x1"></span>
+              <span class="bar bar-x2"></span>
+              <span class="bar bar-x3"></span>
+            </button>
+            <div class="drawer-logo">
+              <img src="./Logo Mundo total 5x5-02.png" alt="Mundo Total">
+            </div>
+            <div class="drawer-top-spacer"></div>
+          </div>
+
+          <div class="drawer-search-bar">
+            <input type="text" id="drawerSearchInput" placeholder="Buscar categoría o producto...">
+            <button class="drawer-search-icon" aria-label="Buscar en menú">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="drawer-content">
+          <h2 class="drawer-title">Departamentos</h2>
+
+          <!-- ACCORDION LIST: Auto-collapses others when one opens -->
+          <ul class="accordion-list" id="departmentsAccordion">
+            
+            <!-- Accesorios -->
+            <li class="accordion-item" data-dept="Accesorios">
+              <button class="accordion-trigger">
+                <span>Accesorios</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <div class="accordion-panel">
+                <ul class="subcat-list">
+                  <li data-subcat="Bolsos y Carteras">Bolsos y Carteras</li>
+                  <li data-subcat="Relojes y Smartwatch">Relojes y Smartwatch</li>
+                  <li data-subcat="Lentes de Sol">Lentes de Sol</li>
+                  <li data-subcat="Billeteras y Monederos">Billeteras y Monederos</li>
+                  <li data-subcat="Joyería y Bisutería">Joyería y Bisutería</li>
+                  <li data-subcat="Mochilas y Maletas">Mochilas y Maletas</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Belleza -->
+            <li class="accordion-item" data-dept="Belleza">
+              <button class="accordion-trigger">
+                <span>Belleza</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <div class="accordion-panel">
+                <ul class="subcat-list">
+                  <li data-subcat="Maquillaje">Maquillaje (40% OFF)</li>
+                  <li data-subcat="Cuidado Facial y Skincare">Cuidado Facial y Skincare</li>
+                  <li data-subcat="Perfumes y Fragancias">Perfumes y Fragancias</li>
+                  <li data-subcat="Cuidado Capilar">Cuidado Capilar</li>
+                  <li data-subcat="Uñas y Manicura">Uñas y Manicura</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Calzado -->
+            <li class="accordion-item" data-dept="Calzado">
+              <button class="accordion-trigger">
+                <span>Calzado</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <div class="accordion-panel">
+                <ul class="subcat-list">
+                  <li data-subcat="Calzado Damas">Calzado Damas</li>
+                  <li data-subcat="Calzado Caballeros">Calzado Caballeros</li>
+                  <li data-subcat="Calzado Infantil">Calzado Infantil</li>
+                  <li data-subcat="Zapatos Deportivos">Zapatos Deportivos</li>
+                  <li data-subcat="Sandalias y Pantuflas">Sandalias y Pantuflas</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Electrodomésticos -->
+            <li class="accordion-item" data-dept="Electrodomésticos">
+              <button class="accordion-trigger">
+                <span>Electrodomésticos</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <div class="accordion-panel">
+                <ul class="subcat-list">
+                  <li data-subcat="Neveras y Congeladores">Neveras y Congeladores</li>
+                  <li data-subcat="Lavadoras y Secadoras">Lavadoras y Secadoras</li>
+                  <li data-subcat="Microondas y Hornos">Microondas y Hornos</li>
+                  <li data-subcat="Licuadoras y Batidoras">Licuadoras y Batidoras</li>
+                  <li data-subcat="Freidoras de Aire">Freidoras de Aire</li>
+                  <li data-subcat="Aires Acondicionados">Aires Acondicionados</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Hogar -->
+            <li class="accordion-item" data-dept="Hogar">
+              <button class="accordion-trigger">
+                <span>Hogar</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <div class="accordion-panel">
+                <ul class="subcat-list">
+                  <li data-subcat="Cocina y Comedor">Cocina y Comedor</li>
+                  <li data-subcat="Dormitorio y Lencería">Dormitorio y Lencería</li>
+                  <li data-subcat="Baño y Aseo">Baño y Aseo</li>
+                  <li data-subcat="Decoración">Decoración</li>
+                  <li data-subcat="Organización y Limpieza">Organización y Limpieza</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Mascotas -->
+            <li class="accordion-item" data-dept="Mascotas">
+              <button class="accordion-trigger">
+                <span>Mascotas</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <div class="accordion-panel">
+                <ul class="subcat-list">
+                  <li data-subcat="Alimentos para Perros y Gatos">Alimentos para Perros y Gatos</li>
+                  <li data-subcat="Juguetes y Peluches">Juguetes y Peluches</li>
+                  <li data-subcat="Camas y Casas">Camas y Casas</li>
+                  <li data-subcat="Collares, Arneses y Correas">Collares, Arneses y Correas</li>
+                  <li data-subcat="Higiene y Cuidado">Higiene y Cuidado</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Moda y Estilo (Expanded by default as in screenshot) -->
+            <li class="accordion-item expanded" data-dept="Moda y Estilo">
+              <button class="accordion-trigger">
+                <span>Moda y Estilo</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <div class="accordion-panel" style="max-height: 500px;">
+                <ul class="subcat-list">
+                  <li data-subcat="Chalecos">Chalecos</li>
+                  <li data-subcat="Crop Tops">Crop Tops</li>
+                  <li data-subcat="Chaquetas">Chaquetas</li>
+                  <li data-subcat="Conjuntos">Conjuntos</li>
+                  <li data-subcat="Faldas">Faldas</li>
+                  <li data-subcat="Franelas">Franelas</li>
+                  <li data-subcat="Joggers">Joggers</li>
+                  <li data-subcat="Pantalones">Pantalones</li>
+                  <li data-subcat="Ropa deportiva">Ropa deportiva</li>
+                  <li data-subcat="Shorts">Shorts</li>
+                  <li data-subcat="Suéteres">Suéteres</li>
+                  <li data-subcat="Vestidos">Vestidos</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Papelería -->
+            <li class="accordion-item" data-dept="Papelería">
+              <button class="accordion-trigger">
+                <span>Papelería</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <div class="accordion-panel">
+                <ul class="subcat-list">
+                  <li data-subcat="Cuadernos y Libretas">Cuadernos y Libretas</li>
+                  <li data-subcat="Bolígrafos y Marcadores">Bolígrafos y Marcadores</li>
+                  <li data-subcat="Material Escolar">Material Escolar</li>
+                  <li data-subcat="Arte y Pintura">Arte y Pintura</li>
+                  <li data-subcat="Organización de Oficina">Organización de Oficina</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Tecnología -->
+            <li class="accordion-item" data-dept="Tecnología">
+              <button class="accordion-trigger">
+                <span>Tecnología</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+              <div class="accordion-panel">
+                <ul class="subcat-list">
+                  <li data-subcat="Smartphones y Celulares">Smartphones y Celulares</li>
+                  <li data-subcat="Televisores y Smart TV">Televisores y Smart TV</li>
+                  <li data-subcat="Audio, Auriculares y Cornetas">Audio, Auriculares y Cornetas</li>
+                  <li data-subcat="Accesorios y Cables">Accesorios y Cables</li>
+                  <li data-subcat="Relojes Inteligentes">Relojes Inteligentes</li>
+                </ul>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </aside>
+
+      <!-- 10. CART SLIDE-IN MODAL -->
+      <div class="modal-backdrop" id="cartBackdrop"></div>
+      <div class="cart-flyout-modal" id="cartFlyout">
+        <div class="flyout-header">
+          <div class="flyout-title">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="#00A7D6"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            <h3>Mi Carrito de Compras</h3>
+          </div>
+          <button class="close-flyout-btn" id="closeCartBtn">&times;</button>
+        </div>
+
+        <div class="cart-items-list" id="cartItemsContainer">
+          <!-- Filled dynamically via JS -->
+        </div>
+
+        <div class="cart-summary-footer" id="cartSummaryFooter">
+          <div class="summary-line">
+            <span>Subtotal:</span>
+            <span class="sum-val" id="cartSubtotalUsd">USD 0,00</span>
+          </div>
+          <div class="summary-line rate-bs">
+            <span>Tasa de cambio BCV:</span>
+            <span class="sum-val" id="cartSubtotalBs">Bs 0,00</span>
+          </div>
+          <div class="cart-actions-row">
+            <button class="checkout-btn" id="checkoutBtn">
+              Continuar al Pago
+            </button>
+            <button class="whatsapp-order-btn" id="whatsappOrderBtn" title="Pedir por WhatsApp">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.19-.09-1.11-.55-1.28-.61-.17-.07-.3-.1-.43.1-.13.19-.5 0.61-.61.73-.11.13-.23.15-.42.05-.19-.09-.81-.3-1.54-.95-.57-.51-.95-1.14-1.06-1.33-.11-.19-.01-.3.08-.39.09-.09.19-.23.29-.35.09-.11.13-.19.19-.32.06-.13.03-.25-.01-.34-.05-.09-.43-1.04-.59-1.42-.16-.38-.32-.33-.44-.33h-.37c-.13 0-.34.05-.52.24-.18.19-.69.67-.69 1.64 0 .97.71 1.9 1.01 2.1.3.2 1.4 2.14 3.39 3 1.99.85 1.99.57 2.35.53.36-.04 1.15-.47 1.31-.93.16-.46.16-.86.11-.93-.05-.07-.18-.12-.37-.21z"/></svg>
+              Comprar por WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. PRODUCT DETAIL MODAL -->
+      <div class="modal-backdrop" id="productModalBackdrop"></div>
+      <div class="product-detail-modal" id="productDetailModal">
+        <button class="close-flyout-btn detail-close-btn" id="closeDetailBtn">&times;</button>
+        <div class="detail-modal-body" id="detailModalBody">
+          <!-- Filled dynamically via JS -->
+        </div>
+      </div>
+
+      <!-- 11b. CHECKOUT FLOW MODAL -->
+      <div class="modal-backdrop" id="checkoutModalBackdrop"></div>
+      <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-header">
+          <h3>Continuar al Pago - Mundo Total</h3>
+          <button class="close-flyout-btn" id="closeCheckoutBtn">&times;</button>
+        </div>
+        <div id="checkoutModalContent">
+          <!-- Filled dynamically via JS -->
+        </div>
+      </div>
+
+      <!-- 12. ATENCIÓN AL CLIENTE / WHATSAPP MODAL -->
+      <div class="modal-backdrop" id="chatModalBackdrop"></div>
+      <div class="chat-advisor-modal" id="chatAdvisorModal">
+        <div class="chat-modal-header">
+          <div class="chat-advisor-info">
+            <div class="advisor-avatar">MT</div>
+            <div>
+              <h4>Atención al Cliente</h4>
+              <span class="online-indicator">Canal Oficial Mundo Total</span>
+            </div>
+          </div>
+          <button class="close-flyout-btn" id="closeChatBtn">&times;</button>
+        </div>
+        <div class="chat-messages-container" id="chatMessages">
+          <div class="chat-msg bot">
+            ¡Hola! 👋 Bienvenido a la tienda oficial de <strong>Mundo Total</strong>. ¿En qué podemos ayudarte hoy? ¿Deseas consultar disponibilidad de algún producto, métodos de pago en Venezuela o envíos?
+          </div>
+        </div>
+        <div class="chat-quick-replies">
+          <button class="reply-chip" onclick="app.sendQuickReply('¿Hacen envíos a nivel nacional?')">Envíos nacionales 🚚</button>
+          <button class="reply-chip" onclick="app.sendQuickReply('¿Qué métodos de pago aceptan?')">Métodos de pago 💳</button>
+          <button class="reply-chip" onclick="app.sendQuickReply('Quiero hablar con un agente humano por WhatsApp')">WhatsApp directo 📲</button>
+        </div>
+        <form class="chat-input-bar" id="chatForm">
+          <input type="text" id="chatInput" placeholder="Escribe tu consulta...">
+          <button type="submit" class="send-chat-btn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- 13. TOAST NOTIFICATION -->
+      <div class="toast-notification" id="toastNotification">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message" id="toastMessage">Producto agregado</span>
+      </div>
+
+    </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
